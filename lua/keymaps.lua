@@ -73,16 +73,3 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>', default_opts) -- search file
 
 -- Vista tag-viewer
 map('n', '<C-m>', ':Vista!!<CR>', default_opts)   -- open/close
-
-function _G.ReloadConfig()
-  for name,_ in pairs(package.loaded) do
-    if name:match('^cnull') then
-      package.loaded[name] = nil
-    end
-  end
-
-  dofile(vim.env.MYVIMRC)
-end
-
-vim.api.nvim_set_keymap('n', '<leader>sv', '<Cmd>lua ReloadConfig()<CR>', { silent = true, noremap = true })
-vim.cmd('command! ReloadConfig lua ReloadConfig()')
