@@ -11,8 +11,6 @@ local cmd = vim.cmd
 -- Neovim shortcuts:
 -----------------------------------------------------------
 
--- clear search highlighting
-map('n', '<leader>c', ':nohl<CR>', default_opts)
 
 -- map Esc to kk
 map('i', 'jk', '<Esc>', {noremap = true})
@@ -60,11 +58,20 @@ map('n', '<leader>gl', ':Git log -p -- % <CR>', default_opts)
 map('n', '<leader>so', ':OpenSession!<Space>', { noremap = true})
 map('n', '<leader>ss', ':SaveSession!<Space>', { noremap = true})
 
+map('n', '<leader>cc', ':CommentToggle<CR>', { noremap = true})
+map('v', '<leader>cc', ':CommentToggle<CR>', { noremap = true})
+
+-- clear search highlighting
+map('n', '<C-l>', ':nohl<CR>', { noremap = true})
+
+-- formatter
+map('n', '<leader>p', ':Format<CR>', default_opts)
+
 -----------------------------------------------------------
 -- Applications & Plugins shortcuts:
 -----------------------------------------------------------
 -- open terminal
-map('n', '<C-t>', ':Term<CR>', { noremap = true })
+-- map('n', '<C-t>', ':Term<CR>', { noremap = true })
 
 -- nvim-tree
 map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)       -- open/close

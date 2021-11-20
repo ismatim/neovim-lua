@@ -104,7 +104,9 @@ return packer.startup(function()
   use {
     "mhinz/vim-grepper"
   }
+  use "mhartington/formatter.nvim"
   -- Typescript
   use "jose-elias-alvarez/null-ls.nvim"
   use "jose-elias-alvarez/nvim-lsp-ts-utils"
+  use "terrortylor/nvim-comment"
 end)
