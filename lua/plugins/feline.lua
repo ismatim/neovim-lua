@@ -86,7 +86,7 @@ local comps = {
         local os = vim.bo.fileformat:lower()
         local icon
         if os == 'unix' then
-          icon = '  '
+          icon = '  '
         elseif os == 'mac' then
           icon = '  '
         else
