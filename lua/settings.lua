@@ -19,6 +19,11 @@ g.mapleader = '¡'             -- change leader to a comma
 opt.mouse = 'a'               -- enable mouse support
 opt.clipboard = 'unnamedplus' -- copy/paste to system clipboard
 opt.swapfile = false          -- don't use swapfile
+opt.undofile = true
+opt.undoreload=10000
+opt.undolevels=1000
+opt.undodir='$HOME/.vim/undo/'
+opt.rnu=true
 
 -----------------------------------------------------------
 -- Neovim UI

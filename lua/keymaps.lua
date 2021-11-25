@@ -55,8 +55,8 @@ map('n', '<leader>rg', ':Rg!<cr>', default_opts)
 map('n', '<leader>gl', ':Git log -p -- % <CR>', default_opts)
 
 
-map('n', '<leader>so', ':OpenSession!<Space>', { noremap = true})
-map('n', '<leader>ss', ':SaveSession!<Space>', { noremap = true})
+map('n', '<leader>so', ':source ~/.vim/sessions/default.vim<CR>', { noremap = true})
+map('n', '<leader>ss', ':Obsession! ~/.vim/sessions/default.vim<CR>', { noremap = true})
 
 map('n', '<leader>cc', ':CommentToggle<CR>', { noremap = true})
 map('v', '<leader>cc', ':CommentToggle<CR>', { noremap = true})
@@ -66,6 +66,9 @@ map('n', '<C-l>', ':nohl<CR>', { noremap = true})
 
 -- formatter
 map('n', '<leader>p', ':Format<CR>', default_opts)
+
+-- select all
+map('n','<C-a>','ggVG', default_opts)
 
 -----------------------------------------------------------
 -- Applications & Plugins shortcuts:

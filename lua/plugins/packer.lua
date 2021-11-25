@@ -75,13 +75,10 @@ return packer.startup(function()
      "tpope/vim-fugitive"
   }
   use {
+     "tpope/vim-obsession"
+  }
+  use {
      "nathom/filetype.nvim"
-  }
-  use {
-     "xolox/vim-misc"
-  }
-  use {
-     "xolox/vim-session"
   }
   use {
      "tpope/vim-dadbod"
@@ -103,6 +100,9 @@ return packer.startup(function()
   }
   use {
     "mhinz/vim-grepper"
+  }
+  use {
+    "norcalli/nvim-colorizer.lua"
   }
   use "mhartington/formatter.nvim"
   -- Typescript
