@@ -45,7 +45,7 @@ lspconfig.tsserver.setup({
             eslint_bin = "eslint_d",
             eslint_enable_diagnostics = true,
             eslint_enable_code_actions = true,
-            enable_formatting = true,
+            enable_formatting = false,
             formatter = "prettier",
             debug = false,
             disable_commands = false,
