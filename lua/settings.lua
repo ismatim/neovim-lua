@@ -30,7 +30,7 @@ opt.rnu=true
 -----------------------------------------------------------
 opt.number = true             -- show line number
 opt.showmatch = true          -- highlight matching parenthesis
-opt.foldmethod = 'indent'     -- enable folding (default 'foldmarker')
+opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
 opt.colorcolumn = '120'        -- line lenght marker at 120 columns
 opt.splitright = true         -- vertical split to the right
 opt.splitbelow = true         -- orizontal split to the bottom

@@ -28,9 +28,6 @@ return packer.startup(function()
   -- autopair
   use 'windwp/nvim-autopairs'
 
-  -- icons
-  use 'kyazdani42/nvim-web-devicons'
-
   -- tagviewer
   use 'liuchengxu/vista.vim'
 
@@ -44,6 +41,14 @@ return packer.startup(function()
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+
+  -- Snippets
+  use 'mattn/emmet-vim'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
 
   -- autocomplete
   use {
@@ -109,4 +114,8 @@ return packer.startup(function()
   use "jose-elias-alvarez/null-ls.nvim"
   use "jose-elias-alvarez/nvim-lsp-ts-utils"
   use "terrortylor/nvim-comment"
+  -- icons
+  use 'kyazdani42/nvim-web-devicons'
+
+
 end)
