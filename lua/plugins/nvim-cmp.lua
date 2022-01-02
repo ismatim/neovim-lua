@@ -65,3 +65,14 @@ cmp.setup {
     { name = 'buffer' },
   },
 }
+
+
+-- disable nvim-cmp completition for markdown
+vim.cmd [[
+  autocmd FileType markdown lua require('cmp').setup.buffer {
+  \   sources = {
+  \     { name = 'path' },
+  \   }
+  \ }
+]]
+

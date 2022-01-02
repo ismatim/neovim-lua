@@ -117,5 +117,9 @@ return packer.startup(function()
   -- icons
   use 'kyazdani42/nvim-web-devicons'
 
+  use 'mrdotb/vim-tailwindcss'
+  use 'tpope/vim-rhubarb'
 
 end)
+
+

@@ -30,7 +30,7 @@ opt.rnu=true
 -----------------------------------------------------------
 opt.number = true             -- show line number
 opt.showmatch = true          -- highlight matching parenthesis
-opt.foldmethod = 'marker'     -- enable folding (default 'foldmarker')
+opt.foldmethod = 'indent'     -- enable folding (default 'foldmarker')
 opt.colorcolumn = '120'        -- line lenght marker at 120 columns
 opt.splitright = true         -- vertical split to the right
 opt.splitbelow = true         -- orizontal split to the bottom
@@ -69,8 +69,8 @@ cmd [[colorscheme rose-pine]]
 -- Tabs, indent
 -----------------------------------------------------------
 opt.expandtab = true      -- use spaces instead of tabs
-opt.shiftwidth = 4        -- shift 4 spaces when tab
-opt.tabstop = 4           -- 1 tab == 4 spaces
+opt.shiftwidth = 2        -- shift 4 spaces when tab
+opt.tabstop = 2           -- 1 tab == 4 spaces
 opt.smartindent = true    -- autoindent new lines
 
 -- don't auto commenting new lines
@@ -136,3 +136,7 @@ end
 
 -- disable nvim intro
 opt.shortmess:append "sI"
+
+
+
+

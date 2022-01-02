@@ -176,13 +176,14 @@ ls.filetype_set("cpp", { "c" })
 -- will need to extend the table yourself instead of setting a new one.
 ]]
 
-require("luasnip.loaders.from_vscode").load({ include = { "python" } }) -- Load only python snippets
+-- require("luasnip.loaders.from_vscode").load({ include = { "javascript" } }) -- Load only python snippets
 -- The directories will have to be structured like eg. <https://github.com/rafamadriz/friendly-snippets> (include
 -- a similar `package.json`)
-require("luasnip.loaders.from_vscode").load({ paths = { "./my-snippets" } }) -- Load snippets from my-snippets folder
+-- require("luasnip.loaders.from_vscode").load({ paths = { "./my-snippets/snippets" } }) -- Load snippets from my-snippets folder
+require("luasnip.loaders.from_vscode").load({ paths = { "./lua/my-snippets/" } }) -- Load snippets from my-snippets folder
 
 -- You can also use lazy loading so you only get in memory snippets of languages you use
-require("luasnip.loaders.from_vscode").lazy_load() -- You can pass { paths = "./my-snippets/"} as well
+-- require("luasnip.loaders.from_vscode").lazy_load() -- You can pass { paths = "./my-snippets/"} as well
 
 -- You can also use snippets in snipmate format, for example <https://github.com/honza/vim-snippets>.
 -- The usage is similar to vscode.
@@ -192,13 +193,11 @@ require("luasnip.loaders.from_vscode").lazy_load() -- You can pass { paths = "./
 -- We need to tell luasnip that "_" contains global snippets:
 ls.filetype_extend("all", { "_" })
 
-require("luasnip.loaders.from_snipmate").load({ include = { "c" } }) -- Load only python snippets
-
-require("luasnip.loaders.from_snipmate").load({ path = { "./my-snippets" } }) -- Load snippets from my-snippets folder
+-- require("luasnip.loaders.from_snipmate").load({ path = { "./my-snippets" } }) -- Load snippets from my-snippets folder
 -- If path is not specified, luasnip will look for the `snippets` directory in rtp (for custom-snippet probably
 -- `~/.config/nvim/snippets`).
 
-require("luasnip.loaders.from_snipmate").lazy_load() -- Lazy loading
+-- require("luasnip.loaders.from_snipmate").lazy_load() -- Lazy loading
 
 ls.snippets = {
 	-- When trying to expand a snippet, luasnip first searches the tables for
@@ -521,3 +520,5 @@ ls.autosnippets = {
 		}),
 	},
 }
+
+

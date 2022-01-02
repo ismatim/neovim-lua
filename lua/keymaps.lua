@@ -41,6 +41,7 @@ map('n', '<leader>rT', ':-tabmove<CR>', default_opts)
 --map('n', '<leader>sv', ':source $MYVIMRC<cr>', { noremap = true})
 map('n', '<leader>ev', ':vsplit $MYVIMRC<cr>', { noremap = true})
 map('n', '<leader>em', ':vsplit ~/.config/nvim/lua/keymaps.lua<CR>', { noremap = true})
+map('n', '<leader>es', ':vsplit ~/.config/nvim/lua/settings.lua<CR>', { noremap = true})
 map('n', '<leader>ep', ':vsplit ~/.config/nvim/lua/plugins/packer.lua<CR>', { noremap = true})
 
 map('n', '<leader>s', ':FZF!', { noremap = true})

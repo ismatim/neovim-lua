@@ -52,7 +52,7 @@ lspconfig.tsserver.setup({
             formatter = "prettier",
             debug = false,
             disable_commands = false,
-            enable_import_on_completion = false,
+            enable_import_on_completion = true,
 
             -- import all
             import_all_timeout = 5000, -- ms
@@ -75,7 +75,7 @@ lspconfig.tsserver.setup({
             inlay_hints_highlight = "Comment",
 
             -- update imports on file move
-            update_imports_on_move = false,
+            update_imports_on_move = true,
             require_confirmation_on_move = false,
             watch_dir = nil,
 
