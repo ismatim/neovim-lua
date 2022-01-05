@@ -119,6 +119,7 @@ return packer.startup(function()
 
   use 'mrdotb/vim-tailwindcss'
   use 'tpope/vim-rhubarb'
+  use 'onsails/lspkind-nvim'
 
 end)
 

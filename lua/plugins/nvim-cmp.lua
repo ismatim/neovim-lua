@@ -67,7 +67,7 @@ cmp.setup {
 }
 
 
--- disable nvim-cmp completition for markdown
+-- disable nvim-cmp completition for markdown: https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
 vim.cmd [[
   autocmd FileType markdown lua require('cmp').setup.buffer {
   \   sources = {
@@ -76,3 +76,11 @@ vim.cmd [[
   \ }
 ]]
 
+
+-- icons on the menu: https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#basic-customisations
+local lspkind = require('lspkind')
+cmp.setup {
+  formatting = {
+    format = lspkind.cmp_format(),
+  },
+}
