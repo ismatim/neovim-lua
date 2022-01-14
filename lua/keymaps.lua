@@ -61,6 +61,7 @@ map('n', '<leader>ss', ':Obsession! ~/.vim/sessions/default.vim<CR>', { noremap 
 map('n', '<leader>cc', ':CommentToggle<CR>', { noremap = true})
 map('v', '<leader>cc', ':CommentToggle<CR>', { noremap = true})
 
+
 -- clear search highlighting
 map('n', '<C-l>', ':nohl<CR>', { noremap = true})
 

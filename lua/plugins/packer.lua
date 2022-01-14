@@ -41,6 +41,7 @@ return packer.startup(function()
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 
   -- Snippets
   use 'mattn/emmet-vim'
@@ -89,6 +90,9 @@ return packer.startup(function()
      "tpope/vim-dadbod"
   }
   use {
+    "tpope/vim-surround"
+  }
+  use {
      "kristijanhusak/vim-dadbod-ui"
   }
   use {
@@ -111,13 +115,12 @@ return packer.startup(function()
   }
   use "mhartington/formatter.nvim"
   -- Typescript
-  use "jose-elias-alvarez/null-ls.nvim"
-  use "jose-elias-alvarez/nvim-lsp-ts-utils"
+  --use "jose-elias-alvarez/null-ls.nvim"
+  --use "jose-elias-alvarez/nvim-lsp-ts-utils"
   use "terrortylor/nvim-comment"
   -- icons
   use 'kyazdani42/nvim-web-devicons'
 
-  use 'mrdotb/vim-tailwindcss'
   use 'tpope/vim-rhubarb'
   use 'onsails/lspkind-nvim'
 

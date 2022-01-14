@@ -16,7 +16,6 @@ cmp.setup {
       luasnip.lsp_expand(args.body)
     end,
   },
-
 -- completion settings
   completion = {
     --completeopt = 'menu,menuone,noselect'
@@ -66,10 +65,25 @@ cmp.setup {
   },
 }
 
+--   -- `/` cmdline setup.
+--     cmp.setup.cmdline('/', {
+--       sources = {
+--         { name = 'buffer' }
+--       }
+--     })
+--     -- `:` cmdline setup.
+--     cmp.setup.cmdline(':', {
+--       sources = cmp.config.sources({
+--         { name = 'path' }
+--       }, {
+--         { name = 'cmdline' }
+--       })
+--     })
+--
 
--- disable nvim-cmp completition for markdown: https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
+-- disable nvim-cmp completition for markdown and text: https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
 vim.cmd [[
-  autocmd FileType markdown lua require('cmp').setup.buffer {
+  autocmd FileType markdown, text lua require('cmp').setup.buffer {
   \   sources = {
   \     { name = 'path' },
   \   }
