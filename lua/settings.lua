@@ -22,7 +22,7 @@ opt.swapfile = false          -- don't use swapfile
 opt.undofile = true
 opt.undoreload=10000
 opt.undolevels=1000
-opt.undodir='$HOME/.vim/undo/'
+opt.undodir='~/.vim/undo/'
 opt.rnu=true
 
 -----------------------------------------------------------

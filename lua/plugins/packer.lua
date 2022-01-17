@@ -115,8 +115,8 @@ return packer.startup(function()
   }
   use "mhartington/formatter.nvim"
   -- Typescript
-  --use "jose-elias-alvarez/null-ls.nvim"
-  --use "jose-elias-alvarez/nvim-lsp-ts-utils"
+  use "jose-elias-alvarez/null-ls.nvim"
+  use "jose-elias-alvarez/nvim-lsp-ts-utils"
   use "terrortylor/nvim-comment"
   -- icons
   use 'kyazdani42/nvim-web-devicons'

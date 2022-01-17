@@ -36,6 +36,8 @@ local tree_cb = require("nvim-tree.config").nvim_tree_callback
 require('nvim-tree').setup {
     open_on_setup = true,
     view = {
+      auto_resize = true,
+      width = 30,
       mappings = {
         custom_only = false,
         list = {
@@ -46,5 +48,6 @@ require('nvim-tree').setup {
       dotfiles = true,
       custom = { '.git', 'node_modules', '.cache', '.bin' },
     },
+    number = true
   }
 }
