@@ -41,7 +41,6 @@ return packer.startup(function()
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
 
   -- Snippets
   use 'mattn/emmet-vim'

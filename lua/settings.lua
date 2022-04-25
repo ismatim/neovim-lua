@@ -22,7 +22,7 @@ opt.swapfile = false          -- don't use swapfile
 opt.undofile = true
 opt.undoreload=10000
 opt.undolevels=1000
-opt.undodir='~/.vim/undo/'
+opt.undodir='/home/ismatim/.vim/undo/'
 opt.rnu=true
 
 -----------------------------------------------------------
@@ -110,10 +110,10 @@ cmd [[
 -----------------------------------------------------------
 -- disable builtins plugins
 local disabled_built_ins = {
-    "netrw",
-    "netrwPlugin",
-    "netrwSettings",
-    "netrwFileHandlers",
+    -- "netrw",
+    -- "netrwPlugin",
+    -- "netrwSettings",
+    -- "netrwFileHandlers",
     "gzip",
     "zip",
     "zipPlugin",
