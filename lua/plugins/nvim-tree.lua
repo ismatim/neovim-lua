@@ -34,20 +34,20 @@ g.nvim_tree_icons = {
 
 local tree_cb = require("nvim-tree.config").nvim_tree_callback
 require('nvim-tree').setup {
-    open_on_setup = true,
-    view = {
-      auto_resize = true,
-      width = 30,
-      mappings = {
-        custom_only = false,
-        list = {
-            { key = "cd", cb = tree_cb("cd") }
-        }
-      },
-    filters = {
-      dotfiles = true,
-      custom = { '.git', 'node_modules', '.cache', '.bin' },
+  open_on_setup = true,
+  view = {
+    -- auto_resize = true,
+    width = 30,
+    mappings = {
+      custom_only = false,
+      list = {
+          { key = "cd", cb = tree_cb("cd") }
+      }
     },
     number = true
+  },
+  filters = {
+    dotfiles = true,
+    custom = { '.git', 'node_modules', '.cache', '.bin' },
   }
 }
