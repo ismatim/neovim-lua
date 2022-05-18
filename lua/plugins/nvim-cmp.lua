@@ -82,13 +82,20 @@ cmp.setup {
 --
 
 -- disable nvim-cmp completition for markdown and text: https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
-vim.cmd [[
-  autocmd FileType markdown, text lua require('cmp').setup.buffer {
-  \   sources = {
-  \     { name = 'path' },
-  \   }
-  \ }
-]]
+-- vim.cmd [[
+--   autocmd FileType markdown, text lua require('cmp').setup.buffer {
+--   \   sources = {
+--   \     { name = 'path' },
+--   \   }
+--   \ }
+-- ]]
+--
+ cmp.setup.filetype({ 'markdown', 'help', 'text' }, {
+    sources = {
+      { name = 'path' },
+      { name = 'buffer' },
+    }
+  })
 
 
 -- icons on the menu: https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#basic-customisations
