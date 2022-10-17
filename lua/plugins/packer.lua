@@ -80,9 +80,6 @@ return packer.startup(function()
      "tpope/vim-fugitive"
   }
   use {
-     "tpope/vim-obsession"
-  }
-  use {
      "nathom/filetype.nvim"
   }
   use {
@@ -120,8 +117,12 @@ return packer.startup(function()
   -- icons
   use 'kyazdani42/nvim-web-devicons'
 
-  use 'tpope/vim-rhubarb'
+  -- use 'tpope/vim-rhubarb'
   use 'onsails/lspkind-nvim'
+
+  -- Go
+  use('nvim-lua/plenary.nvim')
+  use('crispgm/nvim-go')
 
 end)
 

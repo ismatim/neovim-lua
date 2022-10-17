@@ -6,6 +6,7 @@ local prettier = function()
     stdin = true
  }
 end
+--plugin-search-dir=./dir-with-plugins --plugin=prettier-plugin-foo
 
 require('formatter').setup({
   filetype = {

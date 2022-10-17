@@ -87,7 +87,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'bashls', 'html', 'tailwindcss'} --'pyright'
+local servers = { 'bashls', 'html', 'tailwindcss', 'gopls'} --'pyright'
 
 -- Set settings for language servers below
 for _, lsp in ipairs(servers) do
@@ -153,9 +153,18 @@ nvim_lsp.tsserver.setup({
         })
         ts_utils.setup_client(client)
         buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
-        buf_map(bufnr, "n", "gi", ":TSLspRenameFile<CR>")
+        buf_map(bufnr, "n", "gc", ":TSLspRenameFile<CR>")
         buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
         on_attach(client, bufnr)
     end,
 })
 
+
+
+-- Go
+
+-- setup nvim-go
+require('go').setup({})
+
+-- setup lsp client
+nvim_lsp.gopls.setup({})
