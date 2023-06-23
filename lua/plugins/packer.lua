@@ -35,7 +35,7 @@ return packer.startup(function()
   use 'nvim-treesitter/nvim-treesitter'
 
   -- colorschemes
-  use 'tanvirtin/monokai.nvim'
+  -- use 'tanvirtin/monokai.nvim'
 
   use { 'rose-pine/neovim', as = 'rose-pine' }
 
@@ -64,8 +64,8 @@ return packer.startup(function()
 
   -- statusline
   use {
-    'famiu/feline.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
+      "nvim-lualine/lualine.nvim",
+      requires = { "nvim-tree/nvim-web-devicons", opt = true }
   }
 
   -- git labels
@@ -117,7 +117,7 @@ return packer.startup(function()
   -- icons
   use 'kyazdani42/nvim-web-devicons'
 
-  -- use 'tpope/vim-rhubarb'
+  use 'tpope/vim-rhubarb'
   use 'onsails/lspkind-nvim'
 
   -- Go
