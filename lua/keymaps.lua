@@ -83,7 +83,7 @@ map('n', '<leader>r', ':NvimTreeRefresh<CR>', default_opts)  -- refresh
 map('n', '<leader>n', ':NvimTreeFindFile<CR>', default_opts) -- search file
 
 -- Vista tag-viewer
-map('n', '<C-m>', ':Vista!!<CR>', default_opts)   -- open/close
+-- map('n', '<C-m>', ':Vista!!<CR>', default_opts)   -- open/close
 
 
 map('i', '<leader>td', '<ESC>:!trans -no-ansi de:en ', default_opts)

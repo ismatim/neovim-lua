@@ -29,15 +29,15 @@ return packer.startup(function()
   use 'windwp/nvim-autopairs'
 
   -- tagviewer
-  use 'liuchengxu/vista.vim'
+  -- use 'liuchengxu/vista.vim'
 
   -- treesitter interface
   use 'nvim-treesitter/nvim-treesitter'
 
   -- colorschemes
   -- use 'tanvirtin/monokai.nvim'
-
-  use { 'rose-pine/neovim', as = 'rose-pine' }
+  -- use { 'rose-pine/neovim', as = 'rose-pine' }
+  use "olimorris/onedarkpro.nvim"
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -79,9 +79,9 @@ return packer.startup(function()
   use {
      "tpope/vim-fugitive"
   }
-  use {
-     "nathom/filetype.nvim"
-  }
+  -- use {
+  --    "nathom/filetype.nvim"
+  -- }
   use {
      "tpope/vim-dadbod"
   }
@@ -112,7 +112,7 @@ return packer.startup(function()
   use "mhartington/formatter.nvim"
   -- Typescript
   use "jose-elias-alvarez/null-ls.nvim"
-  use "jose-elias-alvarez/nvim-lsp-ts-utils"
+  use "jose-elias-alvarez/typescript.nvim"
   use "terrortylor/nvim-comment"
   -- icons
   use 'kyazdani42/nvim-web-devicons'
