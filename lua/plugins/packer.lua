@@ -16,7 +16,26 @@ cmd [[packadd packer.nvim]]
 local packer = require 'packer'
 
 -- Add packages
-return packer.startup(function()
+packer.startup(function()
+
+-- alpha for splash screen and menu
+use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+}
+
+-- setup pack manager for development languages
+  use {
+       "williamboman/mason.nvim",
+       run = ":MasonUpdate"
+  }
+
+  -- 'for tabs reorder'
+  use 'romgrk/barbar.nvim'
+
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
   -- file explorer
@@ -38,6 +57,7 @@ return packer.startup(function()
   -- use 'tanvirtin/monokai.nvim'
   -- use { 'rose-pine/neovim', as = 'rose-pine' }
   use "olimorris/onedarkpro.nvim"
+  use "EdenEast/nightfox.nvim"
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -47,20 +67,18 @@ return packer.startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
 
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
-
   -- autocomplete
   use {
     'hrsh7th/nvim-cmp',
     requires = {
       'L3MON4D3/LuaSnip',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
       'saadparwaiz1/cmp_luasnip',
     },
   }
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
 
   -- statusline
   use {
@@ -69,13 +87,13 @@ return packer.startup(function()
   }
 
   -- git labels
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('gitsigns').setup()
-    end,
-  }
+  -- use {
+  --   'lewis6991/gitsigns.nvim',
+  --   requires = { 'nvim-lua/plenary.nvim' },
+  --   config = function()
+  --     require('gitsigns').setup()
+  --   end,
+  -- }
   use {
      "tpope/vim-fugitive"
   }
@@ -113,10 +131,11 @@ return packer.startup(function()
   -- Typescript
   use "jose-elias-alvarez/null-ls.nvim"
   use "jose-elias-alvarez/typescript.nvim"
-  use "terrortylor/nvim-comment"
-  -- icons
-  use 'kyazdani42/nvim-web-devicons'
 
+  use "terrortylor/nvim-comment"
+
+  -- icons
+  use 'nvim-tree/nvim-web-devicons'
   use 'tpope/vim-rhubarb'
   use 'onsails/lspkind-nvim'
 
@@ -126,4 +145,5 @@ return packer.startup(function()
 
 end)
 
+require("mason").setup()
 

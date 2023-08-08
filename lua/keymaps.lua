@@ -33,10 +33,15 @@ map('n', '<C-l>', '<C-w>l', default_opts)
 -- close all windows and exit from neovim
 map('n', '<leader>q', ':qa!<CR>', default_opts)
 
--- custom mappings
+-- custom tab mappings
 map('n', '<leader>t', ':tabnew<CR>', default_opts)
-map('n', '<leader>rt', ':+tabmove<CR>', default_opts)
-map('n', '<leader>rT', ':-tabmove<CR>', default_opts)
+map('n', '<leader>rt', '<Cmd>BufferPrevious<CR>', default_opts)
+map('n', '<leader>rT', '<Cmd>BufferNext<CR>', default_opts)
+map('n', '<leader>tc', '<Cmd>BufferClose<CR>', default_opts)
+map('n', '<leader>tbc', '<Cmd>BufferCloseAllButCurrent<CR>', default_opts)
+map('n', '<leader>tbv', '<Cmd>BufferCloseAllButVisible<CR>', default_opts)
+
+
 
 --map('n', '<leader>sv', ':source $MYVIMRC<cr>', { noremap = true})
 map('n', '<leader>ev', ':vsplit $MYVIMRC<cr>', { noremap = true})
