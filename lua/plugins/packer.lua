@@ -146,4 +146,6 @@ use {
 end)
 
 require("mason").setup()
-
+require'barbar'.setup {
+      auto_hide = true,
+}
