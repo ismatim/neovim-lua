@@ -15,6 +15,13 @@ local rome = function()
  }
 end
 
+local gofmt = function()
+  return {
+    exe = "gofmt ",
+    stdin = true
+ }
+end
+
 --plugin-search-dir=./dir-with-plugins --plugin=prettier-plugin-foo
 
 require('formatter').setup({
@@ -24,6 +31,7 @@ require('formatter').setup({
     javascriptreact = { rome},
     html= { rome },
     css = { rome },
-    scss = { rome }
+    scss = { rome },
+    go ={ gofmt }
   }
 })
