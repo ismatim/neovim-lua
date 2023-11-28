@@ -27,7 +27,6 @@ g.git_ignore = 1
 --   files = 1
 -- }
 
-local tree_cb = require("nvim-tree.config").nvim_tree_callback
 require('nvim-tree').setup {
   on_attach = on_attach,
   view = {

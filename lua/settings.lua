@@ -63,7 +63,7 @@ opt.synmaxcol = 240       -- max column for syntax highlight
 -----------------------------------------------------------
 opt.termguicolors = true      -- enable 24-bit RGB colors
 --cmd [[colorscheme rose-pine]]
-cmd [[colorscheme onedark]]
+cmd [[colorscheme nightfox]]
 
 
 -----------------------------------------------------------

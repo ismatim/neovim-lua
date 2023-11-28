@@ -7,9 +7,9 @@ local prettier = function()
  }
 end
 
-local rome = function()
+local biome = function()
   return {
-    exe = "rome ",
+    exe = "biome ",
     args = {"format --stdin-file-path", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), ''},
     stdin = true
  }
@@ -26,12 +26,13 @@ end
 
 require('formatter').setup({
   filetype = {
-    json = { rome },
-    javascript = { rome },
-    javascriptreact = { rome},
-    html= { rome },
-    css = { rome },
-    scss = { rome },
+    json = { biome },
+    javascript = { biome },
+    javascriptreact = { biome },
+    html= { prettier },
+    css = { prettier },
+    scss = { prettier },
+    less = { prettier },
     go ={ gofmt }
   }
 })

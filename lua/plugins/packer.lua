@@ -34,7 +34,7 @@ use {
   }
 
   -- 'for tabs reorder'
-  use 'romgrk/barbar.nvim'
+  -- use 'romgrk/barbar.nvim'
 
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
@@ -58,6 +58,7 @@ use {
   -- use { 'rose-pine/neovim', as = 'rose-pine' }
   use "olimorris/onedarkpro.nvim"
   use "EdenEast/nightfox.nvim"
+  -- use({ 'stevedylandev/flexoki-nvim', as = 'flexoki' })
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -146,6 +147,4 @@ use {
 end)
 
 require("mason").setup()
-require'barbar'.setup {
-      auto_hide = true,
-}
+

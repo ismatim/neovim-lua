@@ -122,3 +122,4 @@ require('go').setup({})
 
 -- setup lsp client
 nvim_lsp.gopls.setup({})
+

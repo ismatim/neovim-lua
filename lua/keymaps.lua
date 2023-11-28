@@ -35,13 +35,8 @@ map('n', '<leader>q', ':qa!<CR>', default_opts)
 
 -- custom tab mappings
 map('n', '<leader>t', ':tabnew<CR>', default_opts)
-map('n', '<leader>gT', '<Cmd>BufferPrevious<CR>', default_opts)
-map('n', '<leader>gt', '<Cmd>BufferNext<CR>', default_opts)
-map('n', '<leader>rT', '<Cmd>BufferMovePrevious<CR>', default_opts)
-map('n', '<leader>rt', '<Cmd>BufferMoveNext<CR>', default_opts)
-map('n', '<leader>tc', '<Cmd>BufferClose<CR>', default_opts)
-map('n', '<leader>tbc', '<Cmd>BufferCloseAllButCurrent<CR>', default_opts)
-map('n', '<leader>tbv', '<Cmd>BufferCloseAllButVisible<CR>', default_opts)
+map('n', '<leader>rt', ':+tabmove<CR>', default_opts)
+map('n', '<leader>rT', ':-tabmove<CR>', default_opts)
 
 
 
