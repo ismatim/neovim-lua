@@ -147,4 +147,3 @@ use {
 end)
 
 require("mason").setup()
-
