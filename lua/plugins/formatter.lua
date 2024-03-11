@@ -22,6 +22,15 @@ local gofmt = function()
  }
 end
 
+
+local python = function()
+  return {
+    exe = "autopep8 ",
+    args = {" ", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), ''},
+    stdin = true
+ }
+end
+
 --plugin-search-dir=./dir-with-plugins --plugin=prettier-plugin-foo
 
 require('formatter').setup({
@@ -33,6 +42,7 @@ require('formatter').setup({
     css = { prettier },
     scss = { prettier },
     less = { prettier },
-    go ={ gofmt }
+    go ={ gofmt },
+    python ={ python  }
   }
 })
