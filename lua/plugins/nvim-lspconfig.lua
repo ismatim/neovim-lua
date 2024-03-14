@@ -51,7 +51,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  -- buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
   vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
   vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
@@ -87,7 +87,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'bashls', 'html', 'tailwindcss', 'gopls', 'pyright'} --'pyright'
+local servers = { 'bashls', 'html', 'tailwindcss', 'gopls', 'pyright', 'tsserver'} --'pyright'
 
 -- Set settings for language servers below
 for _, lsp in ipairs(servers) do
@@ -114,15 +114,3 @@ require("typescript").setup({
       end
   }
 })
-
--- Go
-
--- setup nvim-go
--- require('go').setup({})
-
--- setup lsp client
--- nvim_lsp.gopls.setup({})
-
--- python
--- require'lspconfig'.pyright.setup{}
-
