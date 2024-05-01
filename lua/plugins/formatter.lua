@@ -26,8 +26,8 @@ end
 local python = function()
   return {
     exe = "autopep8 ",
-    args = {" ", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)), ''},
-    stdin = true
+    args = {"-"},
+    stdin = 1
  }
 end
 

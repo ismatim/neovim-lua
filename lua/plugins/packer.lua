@@ -154,6 +154,8 @@ use {
   use 'williamboman/mason-lspconfig.nvim'
   use 'WhoIsSethDaniel/mason-tool-installer.nvim'
 
+  use 'github/copilot.vim'
+
 
 end)
 

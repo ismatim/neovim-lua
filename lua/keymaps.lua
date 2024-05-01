@@ -91,3 +91,8 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>', default_opts) -- search file
 map('i', '<leader>td', '<ESC>:!trans -no-ansi de:en ', default_opts)
 map('v', '<leader>td', '<ESC>:!trans -no-ansi de:en ', default_opts)
 map('n', '<leader>td', ':!trans -no-ansi de:en ', default_opts)
+
+-- Copilot
+map('n', '<leader>cp', ':Copilot panel<CR>', default_opts)  -- Copilot panel for suggestions
+
+

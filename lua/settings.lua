@@ -138,6 +138,16 @@ end
 -- disable nvim intro
 opt.shortmess:append "sI"
 
+---------------------------------------------------
+-- Copilot
+---------------------------------------------------
+
+-- q: convert this statement from vim to lua : "let g:copilot_workspace_folders = \ ["~/Projects/myproject"]" q/
+g.copilot_workspace_folders = {"/tank_data_1/projects/copilot"}
+
+
+
+
 
 
 
